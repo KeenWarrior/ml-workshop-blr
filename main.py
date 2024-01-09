@@ -1,24 +1,11 @@
 import streamlit as st
+from streamlit_image_comparison import image_comparison
 
+# set page config
+st.set_page_config(page_title="Image-Comparison Example", layout="centered")
 
-def on_submit():
-    print(input_text)
-
-
-heading = st.header("Demo for text classification")
-input_text = st.text_input(
-    "Enter text here",
-    placeholder="Demo text",
+# render image-comparison
+image_comparison(
+    img1="fbd.png",
+    img2="fbd.png",
 )
-submit_button = st.button("Submit", on_click=on_submit)
-output_text = st.text("This is prediction")
-
-
-
-
-
-
-
-
-
-
